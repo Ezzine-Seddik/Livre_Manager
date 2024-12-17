@@ -102,7 +102,7 @@ Partial Class AddLiv
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(802, 450)
         Controls.Add(TB3)
         Controls.Add(TB2)
         Controls.Add(TB1)

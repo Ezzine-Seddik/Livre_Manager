@@ -10,9 +10,12 @@ Public Class AddLiv
         If Not (IsNumeric(TB1.Text) And Len(TB1.Text) = 13) Or (ListLiv.LB1.Items.Contains(TB1.Text)) Or (String.IsNullOrWhiteSpace(TB2.Text)) Or (String.IsNullOrWhiteSpace(TB3.Text)) Then
             MessageBox.Show("erreur")
         Else
+            Dim Fromx As ListLiv()
             ListLiv.LB1.Items.Add(TB1.Text)
             ListLiv.LB2.Items.Add(TB2.Text)
             ListLiv.LB3.Items.Add(TB3.Text)
+            List2.DGV_Livre.Rows.Add(TB1.Text, TB2.Text, TB3.Text)
+
         End If
 
 
@@ -27,6 +30,6 @@ Public Class AddLiv
     End Sub
 
     Private Sub BTN2_Click(sender As Object, e As EventArgs) Handles BTN2.Click
-        Me.Close()
+        Form2.ShowForm(New ListLiv)
     End Sub
 End Class
